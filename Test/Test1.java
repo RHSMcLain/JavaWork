@@ -14,7 +14,14 @@ public class Test1{
         Toaster t = new Toaster(4);
         t.toast(t.sliceCapacity);
         t.setDarkness(114);
-        t.toast( 20);
+        int toastMade = t.toast( 20);
+        System.out.println("We now have " + toastMade + " total slices of toast");
         
+        Toaster reginald = new Toaster(2);
+        reginald.setDarkness(3);
+        int regToast = reginald.toast(1);
+        System.out.println(regToast);
+        int tToast = t.toast(1);
+        System.out.println(tToast);
     }
 }

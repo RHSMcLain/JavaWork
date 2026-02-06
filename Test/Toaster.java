@@ -1,7 +1,8 @@
 public class Toaster {
     int sliceCapacity;
     int darknessSetting = 5;
-    
+    static int totalToast = 0;
+
     //constructor method
     
     Toaster(int slots){
@@ -19,7 +20,7 @@ public class Toaster {
         darknessSetting = darkness;
 
     }
-    public void toast(int slices){
+    public int toast(int slices){
         //not greater than slice capacity
         
         if (slices > sliceCapacity){
@@ -29,7 +30,9 @@ public class Toaster {
             System.out.println("You left a stack of bread on the counter " + leftovers + " high");
         }
         //not less than 1
+        totalToast = totalToast + slices;
         System.out.println("You made " + slices + " toast @ darkness " + darknessSetting);
+        return totalToast;
     }
     //Properties: 
         // number of slots
